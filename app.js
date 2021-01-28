@@ -59,9 +59,9 @@ function createPokemonCard(pokemon){
             <small class="type"> Type: <span>${type}</span></small>
         </div>
 
-        <div id="myModal" class="modal">
+        <div id="myModal_${pokemon.id}" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span id="close_${pokemon.id}" class="close">&times;</span>
                 <div class="physical">
                     <p> Height: ${pokemon.height} </p>
                     <p> Weight: ${pokemon.weight} </p>
@@ -80,19 +80,17 @@ function createPokemonCard(pokemon){
     
     pokemonEl.innerHTML = pokeInnerHTML;
     pokemonEl.addEventListener('click', () => {
-        var modal = document.getElementById("myModal");
-        var span = document.getElementsByClassName("close")[0];
+        var modal = document.getElementById(`myModal_${pokemon.id}`);
+        var span = document.getElementById(`close_${pokemon.id}`);
         modal.style.display = "block";
 
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
         window.onclick = function(event) {
-            if (event.target == modal) {
+            if (event.target == modal || event.target == span) {
                 modal.style.display = "none";
             }
         }
     });
+
 
     poke_container.appendChild(pokemonEl);
 }
