@@ -62,6 +62,7 @@ function createPokemonCard(pokemon){
         <div id="myModal_${pokemon.id}" class="modal">
             <div class="modal-content">
                 <span id="close_${pokemon.id}" class="close">&times;</span>
+                <h3 class="name"> ${name} </h3>
                 <div class="physical">
                     <p> Height: ${pokemon.height} </p>
                     <p> Weight: ${pokemon.weight} </p>
