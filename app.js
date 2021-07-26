@@ -64,16 +64,23 @@ function createPokemonCard(pokemon){
                 <span id="close_${pokemon.id}" class="close">&times;</span>
                 <h3 class="name"> ${name} </h3>
                 <div class="physical">
-                    <p> Height: ${pokemon.height} </p>
-                    <p> Weight: ${pokemon.weight} </p>
+                    <div class="modal-img"><img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png"></div>
+                    <div>
+                        <p> Height: ${pokemon.height / 10} m</p>
+                        <p> Weight: ${pokemon.weight / 10} kg </p>
+                    </div>
                 </div>
-                <div class="stats">
-                    <p>${pokemon.stats[0].stat.name} : ${pokemon.stats[0].base_stat}</p><meter value="${pokemon.stats[0].base_stat}" min="0" max="255"></meter>
-                    <p>${pokemon.stats[1].stat.name} : ${pokemon.stats[1].base_stat}</p><meter value="${pokemon.stats[1].base_stat}" min="0" max="255"></meter>
-                    <p>${pokemon.stats[2].stat.name} : ${pokemon.stats[2].base_stat}</p><meter value="${pokemon.stats[2].base_stat}" min="0" max="255"></meter>
-                    <p>${pokemon.stats[3].stat.name} : ${pokemon.stats[3].base_stat}</p><meter value="${pokemon.stats[3].base_stat}" min="0" max="255"></meter>
-                    <p>${pokemon.stats[4].stat.name} : ${pokemon.stats[4].base_stat}</p><meter value="${pokemon.stats[4].base_stat}" min="0" max="255"></meter>
-                    <p>${pokemon.stats[5].stat.name} : ${pokemon.stats[5].base_stat}</p><meter value="${pokemon.stats[5].base_stat}" min="0" max="255"></meter>
+                <div class="modal-stats">
+                    <div class="stats-1">
+                        <p>${pokemon.stats[0].stat.name} : ${pokemon.stats[0].base_stat}</p><meter value="${pokemon.stats[0].base_stat}" min="0" max="255"></meter>
+                        <p>${pokemon.stats[1].stat.name} : ${pokemon.stats[1].base_stat}</p><meter value="${pokemon.stats[1].base_stat}" min="0" max="255"></meter>
+                        <p>${pokemon.stats[2].stat.name} : ${pokemon.stats[2].base_stat}</p><meter value="${pokemon.stats[2].base_stat}" min="0" max="255"></meter>
+                    </div>
+                    <div class="stats-2">
+                        <p>${pokemon.stats[3].stat.name} : ${pokemon.stats[3].base_stat}</p><meter value="${pokemon.stats[3].base_stat}" min="0" max="255"></meter>
+                        <p>${pokemon.stats[4].stat.name} : ${pokemon.stats[4].base_stat}</p><meter value="${pokemon.stats[4].base_stat}" min="0" max="255"></meter>
+                        <p>${pokemon.stats[5].stat.name} : ${pokemon.stats[5].base_stat}</p><meter value="${pokemon.stats[5].base_stat}" min="0" max="255"></meter>
+                    </div>
                 </div>
             </div>
         </div>

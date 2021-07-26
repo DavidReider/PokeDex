@@ -82,11 +82,33 @@ h1 {
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    max-width: 50%; /* Could be more or less, depending on screen size */
-    max-height: 30%;
+    max-width: 50%;
+  }
+
+  .modal-stats{
+    display:flex;
+    justify-content: space-evenly;
+  }
+
+  .modal-content .name{
+  }
+
+  .modal-content .physical{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .modal-content .physical img{
+    width: 120px;
+    height: 120px;
+  }
+
+  .modal-content .stats-1,.stats-2{
+    width: 45%;
+    margin: 10px;
   }
   
   /* The Close Button */
