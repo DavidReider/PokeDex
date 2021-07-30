@@ -91,10 +91,12 @@ function createPokemonCard(pokemon){
         var modal = document.getElementById(`myModal_${pokemon.id}`);
         var span = document.getElementById(`close_${pokemon.id}`);
         modal.style.display = "block";
+        modal.querySelector('.modal-content').style.backgroundColor = color;
 
         window.onclick = function(event) {
             if (event.target == modal || event.target == span) {
                 modal.style.display = "none";
+                
             }
         }
     });
