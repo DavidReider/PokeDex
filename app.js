@@ -52,7 +52,7 @@ function createPokemonCard(pokemon){
     //https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png
     //https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png
     const pokeInnerHTML = `
-        <div class="img-container"><img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png"></div>
+        <div class="img-container"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png"></div>
         <div class="info">
             <span class="number">#${pokemon.id.toString().padStart(3, '0')}</span>
             <h3 class="name"> ${name} </h3>
