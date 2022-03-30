@@ -50,7 +50,8 @@ function createPokemonCard(pokemon){
     pokemonEl.setAttribute('id', name);
     
     //https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png
-    //https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png
+    //https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png - not working
+    //https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png
     const pokeInnerHTML = `
         <div class="img-container"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png"></div>
         <div class="info">
@@ -64,7 +65,7 @@ function createPokemonCard(pokemon){
                 <span id="close_${pokemon.id}" class="close">&times;</span>
                 <h3 class="name"> ${name} </h3>
                 <div class="physical">
-                    <div class="modal-img"><img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png"></div>
+                    <div class="modal-img"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png"></div>
                     <div>
                         <p> Height: ${pokemon.height / 10} m</p>
                         <p> Weight: ${pokemon.weight / 10} kg </p>
